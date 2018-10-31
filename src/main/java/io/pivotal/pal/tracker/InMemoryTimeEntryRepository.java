@@ -13,12 +13,10 @@ public class InMemoryTimeEntryRepository implements TimeEntryRepository {
         timeEntry.setId(id);
         this.timeEntryMap.put(id, timeEntry);
         return timeEntry;
-
-//        return new TimeEntry(1L, any.getProjectId(), any.getUserId(), any.getDate(), any.getHours());
     }
 
     @Override
-    public TimeEntry find(long timeEntryId) {
+    public TimeEntry find(Long timeEntryId) {
         return this.timeEntryMap.get(timeEntryId);
     }
 
@@ -30,16 +28,15 @@ public class InMemoryTimeEntryRepository implements TimeEntryRepository {
     }
 
     @Override
-    public TimeEntry update(long eq, TimeEntry any) {
+    public TimeEntry update(Long eq, TimeEntry any) {
         any.setId(eq);
         this.timeEntryMap.put(eq, any);
         return any;
     }
 
     @Override
-    public long delete(long timeEntryId) {
+    public void delete(Long timeEntryId) {
         this.timeEntryMap.remove(timeEntryId);
-        return timeEntryId;
     }
 
 }
