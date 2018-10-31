@@ -1,0 +1,8 @@
+{
+  "projectId": "123",
+  "userId": "123",
+  "date": "2017-01-09",
+  "hours" : "8"
+}
+
+http://pal-tracker-pietro-sampsonite.apps.pikes.pal.pivotal.io/time-entries
