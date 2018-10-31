@@ -1,0 +1,12 @@
+applications:
+- name: pal-tracker
+  disk_quota: 1G
+  env:
+    WELCOME_MESSAGE: Hello from the review environment
+  instances: 1
+  memory: 1G
+  routes:
+  - route: pal-tracker-pietro-sampsonite.apps.pikes.pal.pivotal.io
+  services:
+  - tracker-database
+  stack: cflinuxfs2
